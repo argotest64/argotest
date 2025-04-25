@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "helm-guestbook.fullname" . }}
+  namespace: helm-guestbook
   labels:
     {{- include "helm-guestbook.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
-  namespace: helm-guestbook
   selector:
     matchLabels:
       {{- include "helm-guestbook.selectorLabels" . | nindent 6 }}

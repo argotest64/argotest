@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "helm-guestbook.fullname" . }}
+  namespace: helm-guestbook
   labels:
     {{- include "helm-guestbook.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
-  namespace: helm-guestbook
   ports:
     - port: {{ .Values.service.port }}
       targetPort: http
