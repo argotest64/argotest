@@ -1,6 +1,6 @@
 {
   "repoURL": "git@github.com:argotest64/argotest.git",
-  "drySha": "d1c282a96d6a8962e7aa630c05550a12825d5a7a",
+  "drySha": "cac5b8c8231f7e64ea15adce7260ae48fad226ec",
   "commands": [
     "helm template . --name-template my-app --include-crds"
   ]
