@@ -6,6 +6,7 @@ metadata:
     {{- include "helm-guestbook.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
+  namespace: helm-guestbook
   ports:
     - port: {{ .Values.service.port }}
       targetPort: http

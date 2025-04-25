@@ -8,6 +8,7 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
+  namespace: helm-guestbook
   selector:
     matchLabels:
       {{- include "helm-guestbook.selectorLabels" . | nindent 6 }}
