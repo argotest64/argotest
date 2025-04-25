@@ -21,8 +21,8 @@ metadata:
     app.kubernetes.io/version: 1.16.0
     helm.sh/chart: helm-guestbook-0.1.0
   name: my-app-helm-guestbook
-spec:
   namespace: helm-guestbook
+spec:
   ports:
     - name: http
       port: 80
@@ -43,8 +43,8 @@ metadata:
     app.kubernetes.io/version: 1.16.0
     helm.sh/chart: helm-guestbook-0.1.0
   name: my-app-helm-guestbook
-spec:
   namespace: helm-guestbook
+spec:
   replicas: 1
   selector:
     matchLabels:
