@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+spec:
+  sourceHydrator:
+    drySource:
+      repoURL: git@github.com:argotest64/argotest.git
+      path: helm-guestbook
+      targetRevision: HEAD
+    syncSource:
+      targetBranch: environments/dev
+      path: helm-guestbook
